@@ -1,0 +1,12 @@
+{
+    "name": "responsive-leaflet",
+    "version": "0.0.1",
+    "private": false,
+    "dependencies": {
+        "esri-leaflet": "git://github.com/Esri/esri-leaflet.git",
+        "Leaflet.fullscreen": "git://github.com/mapbox/Leaflet.fullscreen.git",
+        "zurb-foundation": "4.x",
+        "express": "3.x",
+        "jade": "*"
+    }
+}

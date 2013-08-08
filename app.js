@@ -1,6 +1,9 @@
 var express  = require('express');
+var http = require('http');
 var path = require('path');
+
 var app = express();
+var server = http.createServer(app);
 var routes = require('./routes');
 
 
@@ -16,6 +19,10 @@ app.configure(function(){
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
   app.use(express.static(path.join(__dirname, 'node_modules', 'zurb-foundation' )));
+  app.use('/leaflet', express.static(path.join(__dirname, 'node_modules', 'leaflet', 'dist' )));
+  app.use('/leaflet', express.static(path.join(__dirname, 'node_modules', 'leaflet-fullscreen', 'dist' )));
+  app.use('/leaflet', express.static(path.join(__dirname, 'node_modules', 'leaflet-fullscreen', 'src' )));
+  app.use('/esri', express.static(path.join(__dirname, 'node_modules', 'Esri-Leaflet', 'dist' )));
 });
 
 app.configure('development', function(){
@@ -29,7 +36,7 @@ app.configure('production', function(){
 // routes
 require('./routes/index')(app);
  
-app.listen(3000, function(){
-  console.log("Express server listening on port %d in %s mode",
+server.listen(3000, function(){
+  console.log("Express server listening on port %d in %s mode", server.address().port,
      app.settings.env);
 });

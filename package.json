@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "private": false,
     "dependencies": {
+        "leaflet": "0.6.x",
         "esri-leaflet": "git://github.com/Esri/esri-leaflet.git",
         "Leaflet.fullscreen": "git://github.com/mapbox/Leaflet.fullscreen.git",
         "zurb-foundation": "4.x",

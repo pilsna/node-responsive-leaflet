@@ -71,7 +71,8 @@ block scripts
     var map = L.map('map', {fullscreenControl: true});
 
     // ArcGIS Online Basemaps - Streets, Topographic, Gray, GrayLabels, Oceans, NationalGeographic, Imagery, ImageryLabels
-    L.esri.basemapLayer("Gray").addTo(map);
+    // L.esri.basemapLayer("Gray").addTo(map);
+    L.tileLayer.provider("Stamen.Watercolor").addTo(map);
 
     function onLocationFound(e) {
       var radius = e.accuracy / 2;

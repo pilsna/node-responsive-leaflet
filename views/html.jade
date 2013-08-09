@@ -18,9 +18,11 @@ html(lang="en")
         #content
             block content
 
-        script document.write('<script src=js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
+        script(type='text/javascript'). 
+            document.write('<script src=js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
         script(src='js/foundation/foundation.js').
-        script $(document).foundation();
+        script(type='text/javascript').  
+            $(document).foundation();
         
         block scripts
     

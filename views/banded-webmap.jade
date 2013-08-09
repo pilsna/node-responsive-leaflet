@@ -1,4 +1,4 @@
-extends html
+extends html-arcgis
 
 block head
   title banded html layout
@@ -24,7 +24,6 @@ block content
     .row
       .large-12.columns
         #map
-        //img(src='http://placehold.it/1000x400&text=[img]')
         hr
     // Second Band (Image Left with Text)
     .row
@@ -67,34 +66,7 @@ block content
               li
                 a(href='#') Link 4
 block scripts
-  script(type='text/javascript'). 
-    var map = L.map('map', {fullscreenControl: true});
+  script(type='text/javascript') initWebmap('4778fee6371d4e83a22786029f30c7e1', 'map')
+//initStamen('map');
 
-    // ArcGIS Online Basemaps - Streets, Topographic, Gray, GrayLabels, Oceans, NationalGeographic, Imagery, ImageryLabels
-    L.esri.basemapLayer("Gray").addTo(map);
-
-    function onLocationFound(e) {
-      var radius = e.accuracy / 2;
-      L.marker(e.latlng).addTo(map).bindPopup("You are within " + radius + " meters from this point").openPopup();
-      L.circle(e.latlng, radius).addTo(map);
-    }
-
-    function onLocationError(e) {
-      alert(e.message);
-    }
-
-    map.on('locationfound', onLocationFound);
-    map.on('locationerror', onLocationError);
-
-    map.on('fullscreenchange', function () {
-      if (map.isFullscreen()) {
-          console.log('entered fullscreen');
-          $("#map").height('100%');
-      } else {
-          console.log('exited fullscreen');
-          $("#map").height('400px');
-      }
-    });
-
-    map.locate({setView: true, maxZoom: 16});
 

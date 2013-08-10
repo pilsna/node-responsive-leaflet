@@ -1,3 +1,35 @@
+function initLeaflet(div){
+      var map = L.map('map', {fullscreenControl: true});
+
+    // ArcGIS Online Basemaps - Streets, Topographic, Gray, GrayLabels, Oceans, NationalGeographic, Imagery, ImageryLabels
+    // L.esri.basemapLayer("Gray").addTo(map);
+    L.tileLayer.provider("Stamen.Watercolor").addTo(map);
+
+    function onLocationFound(e) {
+      var radius = e.accuracy / 2;
+      L.marker(e.latlng).addTo(map).bindPopup("You are within " + radius + " meters from this point").openPopup();
+      L.circle(e.latlng, radius).addTo(map);
+    }
+
+    function onLocationError(e) {
+      alert(e.message);
+    }
+
+    map.on('locationfound', onLocationFound);
+    map.on('locationerror', onLocationError);
+
+    map.on('fullscreenchange', function () {
+      if (map.isFullscreen()) {
+          console.log('entered fullscreen');
+          $("#map").height('100%');
+      } else {
+          console.log('exited fullscreen');
+          $("#map").height('400px');
+      }
+    });
+
+    map.locate({setView: true, maxZoom: 16});
+}
 
 function initWebmap(id, div){
   require([

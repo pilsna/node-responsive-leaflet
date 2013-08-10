@@ -14,16 +14,14 @@ html(lang="en")
         script(src='esri/esri-leaflet.min.js').
         script(src='leaflet/Leaflet.fullscreen.js').
         script(src='js/leaflet-providers.js').
+        script(src='js/map.js').
         block head
     body
         #content
             block content
 
-        script(type='text/javascript'). 
-            document.write('<script src=js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
+        script(type='text/javascript') document.write('<script src=js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
         script(src='js/foundation/foundation.js').
-        script(type='text/javascript').  
-            $(document).foundation();
-        
+        script(type='text/javascript') $(document).foundation();
         block scripts
     

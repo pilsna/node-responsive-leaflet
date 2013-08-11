@@ -1,0 +1,57 @@
+{
+  "id": "945342f39cdf44158378e1df23bb37d3",
+  "owner": "nilsrydh",
+  "created": 1376155896000,
+  "modified": 1376170297000,
+  "guid": null,
+  "name": null,
+  "title": "Run for coffee",
+  "type": "Web Map",
+  "typeKeywords": [
+    "ArcGIS Online",
+    "Collector",
+    "Data Editing",
+    "Explorer Web Map",
+    "Map",
+    "Online Map",
+    "Web Map"
+  ],
+  "description": null,
+  "tags": [
+    "coffee"
+  ],
+  "snippet": "test with leaflet",
+  "thumbnail": "thumbnail/ago_downloaded.png",
+  "documentation": null,
+  "extent": [
+    [
+      12.4534,
+      55.6209
+    ],
+    [
+      12.6353,
+      55.7391
+    ]
+  ],
+  "spatialReference": null,
+  "accessInformation": null,
+  "licenseInfo": null,
+  "culture": "en-us",
+  "properties": null,
+  "url": null,
+  "access": "public",
+  "size": 1464,
+  "appCategories": [],
+  "industries": [],
+  "languages": [],
+  "largeThumbnail": null,
+  "banner": null,
+  "screenshots": [],
+  "listed": false,
+  "ownerFolder": "8ef199c47162444ba111a47f8ec8833d",
+  "commentsEnabled": true,
+  "numComments": 0,
+  "numRatings": 0,
+  "avgRating": 0.0,
+  "numViews": 7
+}

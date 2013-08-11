@@ -1,0 +1,92 @@
+{
+  "operationalLayers": [
+    {
+      "url": "https://maps.google.com/maps/ms?ie=UTF8&oe=UTF8&dg=feature&authuser=0&msa=0&output=kml&msid=214806079513414170358.000446c656909ae3a376f",
+      "id": "kml_2522",
+      "visibility": true,
+      "opacity": 1,
+      "title": "Kaffe",
+      "type": "KML",
+      "visibleFolders": [
+        0,
+        1
+      ]
+    },
+    {
+      "url": "http://services1.arcgis.com/PmDv7j1Xl4584BHK/arcgis/rest/services/Løberute/FeatureServer/0",
+      "id": "Løberute_7393",
+      "visibility": true,
+      "opacity": 1,
+      "mode": 1,
+      "title": "Løberute - Rute",
+      "itemId": "029bcfe6f64a4f96acbd2568b18892a0",
+      "layerDefinition": {
+        "drawingInfo": {
+          "renderer": {
+            "type": "simple",
+            "symbol": {
+              "color": [
+                79,
+                129,
+                189,
+                168
+              ],
+              "width": 3,
+              "type": "esriSLS",
+              "style": "esriSLSSolid"
+            }
+          }
+        }
+      },
+      "popupInfo": {
+        "title": "Rute: {SHAPE_Length}",
+        "fieldInfos": [
+          {
+            "fieldName": "OBJECTID",
+            "label": "OBJECTID",
+            "isEditable": false,
+            "tooltip": "",
+            "visible": false,
+            "format": null,
+            "stringFieldOption": "textbox"
+          }
+        ],
+        "description": null,
+        "showAttachments": true,
+        "mediaInfos": []
+      }
+    }
+  ],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "World_Light_Gray_Base_9116",
+        "opacity": 1,
+        "visibility": true,
+        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer"
+      },
+      {
+        "id": "World_Light_Gray_Reference_2158",
+        "isReference": true,
+        "opacity": 1,
+        "visibility": true,
+        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer"
+      }
+    ],
+    "title": "Lysegråt lærred"
+  },
+  "version": "1.9",
+  "applicationProperties": {
+    "viewing": {
+      "routing": {
+        "enabled": true
+      },
+      "basemapGallery": {
+        "enabled": true
+      },
+      "measure": {
+        "enabled": true
+      }
+    }
+  }
+}

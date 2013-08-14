@@ -8,9 +8,9 @@ module.exports = function(app) {
     res.render('banded', { title: 'leaflet' })
   });
   app.get('/banded/:webmapid', function(req, res){
-  	var id = req.params.webmapid;
-    var webmap = arcgis.map(id);
-    console.log('webmapid: ' + webmap);
+    var id = req.params.webmapid;
+    console.log('webmapid: ' + id)
+    arcgis.loadWebmap(id);
     res.render('banded', { title: 'leaflet' })
   });
   app.get('/webmap', function(req, res){

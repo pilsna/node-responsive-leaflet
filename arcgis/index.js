@@ -1,17 +1,21 @@
+var http = require('http');
+var util = require('util');
 
-function Arcgis(webmapid) {
-	function map(webmapid){
-		var req = http.request(options, function(response) {
-			response.on("data", function(data) {
-		 		console.log("some data from the response", data);
-			});
-			response.on("end", function() {
-		    	console.log("response ended");
-			});
-		});
-		req.end();
-	}
-	return webmapid;
+function options(id, organization, token){
+	
+	var options = {
+  		host: util.format('http://%s.maps.arcgis.com', organization),
+  		port: 80,
+  		path: util.format('/sharing/rest/content/items/%d/data?f=json&token=%s', id, token)
+	};
+
 }
 
-module.exports.arcgis = Arcgis;
+function loadWebmap(id){
+	http.get(options(id, 'informi', ''), function(res) {
+		console.log("Got response: " + res.statusCode);
+	}).on('error', function(e) {
+		console.log("Got error: " + e.message);
+	});
+}
+

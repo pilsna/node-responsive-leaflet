@@ -6,9 +6,6 @@ var app = express();
 var server = http.createServer(app);
 var routes = require('./routes');
 
-
- 
-
 // Configuration
  
 app.configure(function(){

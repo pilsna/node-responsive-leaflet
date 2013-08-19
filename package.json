@@ -4,14 +4,14 @@
     "private": false,
     "main": "./app.js",
     "engines": {
-        "node": ">= 0.8.0"
+        "node": ">= 0.10.0"
         },
     "dependencies": {
         "leaflet": "0.6.x",
         "geoservices": "0.1.x",
         "esri-leaflet": "git://github.com/Esri/esri-leaflet.git",
         "leaflet-providers": "git://github.com/leaflet-extras/leaflet-providers.git",
-        "Leaflet.fullscreen": "git://github.com/mapbox/Leaflet.fullscreen.git",
+        "leaflet-fullscreen": "git://github.com/mapbox/Leaflet.fullscreen.git",
         "zurb-foundation": "4.x",
         "express": "3.x",
         "jade": "*",

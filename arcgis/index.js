@@ -39,7 +39,7 @@ function getWebmap(id, callback) {
 	var urlOptions = options(id, 'informi', '');
 	request({ url: 'http://' + urlOptions.host + urlOptions.path, json:true}
 		, function(error, response, body) {
-		callback(body);
+		callback(JSON.parse(body));
 	});
 }
 

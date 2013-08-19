@@ -11,7 +11,7 @@ module.exports = function(app) {
     var id = req.params.webmapid;
     console.log('webmapid: ' + id)
     arcgis.loadWebmap(id, function(webmap){
-      console.log('returning webmap: ' + webmap);
+      console.log('returning webmap: ' + webmap.operationalLayers);
       res.render('banded', { title: 'leaflet', webmap: webmap});  
     });
     

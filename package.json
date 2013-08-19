@@ -8,13 +8,13 @@
         },
     "dependencies": {
         "leaflet": "0.6.x",
-        "geoservices": "0.1.x",
+        "geoservices": "git://github.com/Esri/geoservices-js.git",
         "esri-leaflet": "git://github.com/Esri/esri-leaflet.git",
         "leaflet-providers": "git://github.com/leaflet-extras/leaflet-providers.git",
         "leaflet-fullscreen": "git://github.com/mapbox/Leaflet.fullscreen.git",
         "zurb-foundation": "4.x",
         "express": "3.x",
-        "jade": "*",
-        "request": "*"
+        "jade": "0.34.x",
+        "request": "1.x"
     }
 }

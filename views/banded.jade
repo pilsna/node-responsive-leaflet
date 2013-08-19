@@ -44,7 +44,8 @@ block content
         h4 This is a content section.
         p
           ul
-            li: a(href=webmap.operationalLayers[0].url ) #{webmap.operationalLayers[0].title}
+            each layer in webmap.operationalLayers
+              li: a(href=layer.url ) #{layer.title}
             li: a(href=webmap.baseMap.baseMapLayers[0].url ) #{webmap.baseMap.baseMapLayers[0].id}
             
         p
@@ -69,5 +70,7 @@ block content
               li
                 a(href='#') Link 4
 block scripts
-  script(type='text/javascript') initLeaflet('map', 'Stamen.Watercolor');
+  script.
+    var layers = !{JSON.stringify(webmap.operationalLayers)}
+  script(type='text/javascript') initLeaflet('map', 'Stamen.Watercolor', layers);
 

@@ -13,6 +13,7 @@ function options(id, organization, token){
 	return options;
 }
 
+
 var loadWebmap = function (id){
 	var json = '';
 	var req = http.get(options(id, 'informi', ''), function(res) {

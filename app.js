@@ -1,5 +1,6 @@
 var express  = require('express');
 var http = require('http');
+var port = process.env.port || 3000;
 var path = require('path');
 
 var app = express();
@@ -33,7 +34,7 @@ app.configure('production', function(){
 // routes
 require('./routes/index')(app);
  
-server.listen(3000, function(){
+server.listen(port, function(){
   console.log("Express server listening on port %d in %s mode", server.address().port,
      app.settings.env);
 });

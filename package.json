@@ -10,6 +10,7 @@
         "Leaflet.fullscreen": "git://github.com/mapbox/Leaflet.fullscreen.git",
         "zurb-foundation": "4.x",
         "express": "3.x",
-        "jade": "*"
+        "jade": "*",
+        "request": "*"
     }
 }

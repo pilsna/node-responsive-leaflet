@@ -1,9 +1,9 @@
-function initLeaflet(div){
+function initLeaflet(div, basemap){
       var map = L.map('map', {fullscreenControl: true});
 
     // ArcGIS Online Basemaps - Streets, Topographic, Gray, GrayLabels, Oceans, NationalGeographic, Imagery, ImageryLabels
     // L.esri.basemapLayer("Gray").addTo(map);
-    L.tileLayer.provider("Stamen.Watercolor").addTo(map);
+    L.tileLayer.provider(basemap).addTo(map);
 
     function onLocationFound(e) {
       var radius = e.accuracy / 2;
@@ -59,36 +59,6 @@ function initWebmap(id, div){
     ready(function(){
 
     parser.parse();
-
-
-    arcgisUtils.createMap(id, div).then(function(response){
-      //update the app 
-      dom.byId("title").innerHTML = response.itemInfo.item.title;
-      dom.byId("subtitle").innerHTML = response.itemInfo.item.snippet;
-
-      var map = response.map;
-
-
-
-      //add the scalebar 
-      /* 
-      var scalebar = new Scalebar({
-        map: map,
-        scalebarUnit: "english"
-      });
-
-
-      //add the legend. Note that we use the utility method getLegendLayers to get 
-      //the layers to display in the legend from the createMap response.
-      var legendLayers = arcgisUtils.getLegendLayers(response); 
-      var legendDijit = new Legend({
-        map: map,
-        layerInfos: legendLayers
-      },"legend");
-      legendDijit.startup();
-*/
-
-    });
 
 
     });

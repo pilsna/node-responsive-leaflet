@@ -4,24 +4,24 @@ html(lang="en")
         meta(charset='utf-8')
         // Set the viewport width to device width for mobile
         meta(name='viewport', content='width=device-width')
-        link(rel='stylesheet', href='css/normalize.css')
-        link(rel='stylesheet', href='css/foundation.css')
-        link(rel='stylesheet', href='leaflet/leaflet.css')
-        link(rel='stylesheet', href='css/styles.css')
-        link(rel='stylesheet', href='leaflet/leaflet.fullscreen.css')
-        script(src='js/vendor/custom.modernizr.js').
-        script(src='leaflet/leaflet.js').
-        script(src='esri/esri-leaflet.min.js').
-        script(src='leaflet/Leaflet.fullscreen.js').
-        script(src='js/leaflet-providers.js').
-        script(src='js/map.js').
+        link(rel='stylesheet', href='/css/normalize.css')
+        link(rel='stylesheet', href='/css/foundation.css')
+        link(rel='stylesheet', href='/leaflet/leaflet.css')
+        link(rel='stylesheet', href='/css/styles.css')
+        link(rel='stylesheet', href='/leaflet/leaflet.fullscreen.css')
+        script(src='/js/vendor/custom.modernizr.js').
+        script(src='/leaflet/leaflet.js').
+        script(src='/esri/esri-leaflet.min.js').
+        script(src='/leaflet/Leaflet.fullscreen.js').
+        script(src='/js/leaflet-providers.js').
+        script(src='/js/map.js').
         block head
     body
         #content
             block content
 
-        script(type='text/javascript') document.write('<script src=js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
-        script(src='js/foundation/foundation.js').
+        script(type='text/javascript') document.write('<script src=/js/vendor/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>');
+        script(src='/js/foundation/foundation.js').
         script(type='text/javascript') $(document).foundation();
         block scripts
     

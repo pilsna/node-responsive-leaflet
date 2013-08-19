@@ -1,9 +1,10 @@
 var http = require('http');
+var request = require('request');
 var util = require('util');
 
 function options(id, organization, token){
 	var options = {
-		host: util.format('http://%s.maps.arcgis.com', organization),
+		host: util.format('%s.maps.arcgis.com', organization),
 		port: 80,
 		path: util.format('/sharing/rest/content/items/%s/data?f=json', id),
 		method: 'GET'
@@ -12,13 +13,33 @@ function options(id, organization, token){
 	return options;
 }
 
-module.exports.loadWebmap = function (id){
-	http.get(options(id, 'informi', ''), function(res) {
+var loadWebmap = function (id){
+	var json = '';
+	var req = http.get(options(id, 'informi', ''), function(res) {
 		console.log("Got response: " + res.statusCode);
-	}).on('error', function(e){
+		
+		res.on('data', function (chunk){
+			json += chunk;
+		});
+
+		res.on('end', function() {
+			return json;
+		});
+	});
+	req.on('error', function(e){
 	   console.log("Error: " + "\n" + e.message); 
 	   console.log( e.stack );
+	   return null;
 	});
-	return id;
+	
 };
 
+function getWebmap(id, callback) {
+	var urlOptions = options(id, 'informi', '');
+	request({ url: 'http://' + urlOptions.host + urlOptions.path, json:true}
+		, function(error, response, body) {
+		callback(body);
+	});
+}
+
+module.exports.loadWebmap = getWebmap;

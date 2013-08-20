@@ -43,7 +43,7 @@
 					function (match, attributionName) {
 						return attributionReplacer(providers[attributionName].options.attribution);
 					}
-					);
+				);
 			};
 			provider.options.attribution = attributionReplacer(provider.options.attribution);
 
@@ -64,8 +64,8 @@
 			url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
 			options: {
 				attribution:
-				'&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
+					'&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+					'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'
 			},
 			variants: {
 				Mapnik: {},
@@ -81,7 +81,7 @@
 			url: 'http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png',
 			options: {
 				attribution:
-				'&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, {attribution.OpenStreetMap}'
+					'&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, {attribution.OpenStreetMap}'
 			}
 		},
 		OpenSeaMap: {
@@ -123,8 +123,8 @@
 			url: 'http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpeg',
 			options: {
 				attribution:
-				'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; ' +
-				'Map data {attribution.OpenStreetMap}',
+					'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; ' +
+					'Map data {attribution.OpenStreetMap}',
 				subdomains: '1234'
 			},
 			variants: {
@@ -133,8 +133,8 @@
 					url: 'http://oatile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg',
 					options: {
 						attribution:
-						'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; ' +
-						'Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency'
+							'Tiles Courtesy of <a href="http://www.mapquest.com/">MapQuest</a> &mdash; ' +
+							'Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency'
 					}
 				}
 			}
@@ -145,8 +145,8 @@
 			},
 			options: {
 				attribution:
-				'Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; ' +
-				'Map data {attribution.OpenStreetMap}',
+					'Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; ' +
+					'Map data {attribution.OpenStreetMap}',
 				subdomains: 'abcd'
 			}
 		},
@@ -154,9 +154,9 @@
 			url: 'http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png',
 			options: {
 				attribution:
-				'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
-				'<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; ' +
-				'Map data {attribution.OpenStreetMap}',
+					'Map tiles by <a href="http://stamen.com">Stamen Design</a>, ' +
+					'<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; ' +
+					'Map data {attribution.OpenStreetMap}',
 				subdomains: 'abcd',
 				minZoom: 0,
 				maxZoom: 20
@@ -210,8 +210,8 @@
 				WorldStreetMap: {
 					options: {
 						attribution:
-						'{attribution.Esri} &mdash; ' +
-						'Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
+							'{attribution.Esri} &mdash; ' +
+							'Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 					}
 				},
 				DeLorme: {
@@ -226,16 +226,16 @@
 					url: 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}',
 					options: {
 						attribution:
-						'{attribution.Esri} &mdash; ' +
-						'Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+							'{attribution.Esri} &mdash; ' +
+							'Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
 					}
 				},
 				WorldImagery: {
 					url: 'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
 					options: {
 						attribution:
-						'{attribution.Esri} &mdash; ' +
-						'Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+							'{attribution.Esri} &mdash; ' +
+							'Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 					}
 				},
 				WorldTerrain: {
@@ -243,8 +243,8 @@
 					options: {
 						maxZoom: 13,
 						attribution:
-						'{attribution.Esri} &mdash; ' +
-						'Source: USGS, Esri, TANA, DeLorme, and NPS'
+							'{attribution.Esri} &mdash; ' +
+							'Source: USGS, Esri, TANA, DeLorme, and NPS'
 					}
 				},
 				WorldShadedRelief: {
@@ -328,7 +328,7 @@
 		Nokia: {
 			options: {
 				attribution:
-				'Map &copy; <a href="http://developer.here.com">Nokia</a>, Data &copy; NAVTEQ 2012',
+					'Map &copy; <a href="http://developer.here.com">Nokia</a>, Data &copy; NAVTEQ 2012',
 				subdomains: '1234',
 				devID: 'xyz', //These basemaps are free and you can sign up here:  http://developer.here.com/plans
 				appID: 'abc'
@@ -355,7 +355,7 @@
 			url: 'http://a{s}.acetate.geoiq.com/tiles/acetate-hillshading/{z}/{x}/{y}.png',
 			options: {
 				attribution:
-				'&copy;2012 Esri & Stamen, Data from OSM and Natural Earth',
+					'&copy;2012 Esri & Stamen, Data from OSM and Natural Earth',
 				subdomains: '0123',
 				minZoom: 2,
 				maxZoom: 18
@@ -386,9 +386,9 @@
 			url:'http://{s}.tile.cloudmade.com/{apiKey}/{styleID}/256/{z}/{x}/{y}.png',
 			options: {
 				attribution:
-				'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-				'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-				'Map tile imagery © <a href="http://cloudmade.com">CloudMade</a>',
+					'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+					'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+					'Map tile imagery © <a href="http://cloudmade.com">CloudMade</a>',
 				minZoom: 0,
 				apiKey: 'abc', // Sign up for an API key at http://cloudmade.com/ - first 500,000 tile requests are free
 				styleID: '1'
@@ -420,8 +420,8 @@
 			if (base.length) {
 				(function () {
 					var out = {},
-					len = base.length,
-					i = 0;
+					    len = base.length,
+					    i = 0;
 
 					while (i < len) {
 						if (typeof base[i] === 'string') {
@@ -442,8 +442,8 @@
 			if (overlay && overlay.length) {
 				(function () {
 					var out = {},
-					len = overlay.length,
-					i = 0;
+					    len = overlay.length,
+					    i = 0;
 
 					while (i < len) {
 						if (typeof base[i] === 'string') {
@@ -462,8 +462,8 @@
 		}
 	});
 
-L.control.layers.provided = function (baseLayers, overlays, options) {
-	return new L.Control.Layers.Provided(baseLayers, overlays, options);
-};
+	L.control.layers.provided = function (baseLayers, overlays, options) {
+		return new L.Control.Layers.Provided(baseLayers, overlays, options);
+	};
 }());
 

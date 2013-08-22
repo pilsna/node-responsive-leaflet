@@ -1,9 +1,21 @@
+function initWebmap(id, div) {
+	require([
+	  	"esri/arcgis/utils", "esri/map" 
+	], function(arcgisUtils, Map ) {
+	 	var deferred = arcgisUtils.createMap(id, div, {
+	    	mapOptions: {
+	      		slider: true
+	    	}	  
+		});
+	});
+}
+
 function initLeaflet(div, basemap, layers){
 	var map = L.map(div, {fullscreenControl: true});
 
 	// ArcGIS Online Basemaps - Streets, Topographic, Gray, GrayLabels, Oceans, NationalGeographic, Imagery, ImageryLabels
-	L.esri.basemapLayer("Gray").addTo(map);
-	//L.tileLayer.provider(basemap).addTo(map);
+	//L.esri.basemapLayer("Gray").addTo(map);
+	L.tileLayer.provider(basemap).addTo(map);
 
 	for (var i = layers.length - 1; i >= 0; i--) {
 		if (layers[i].mode == 1){

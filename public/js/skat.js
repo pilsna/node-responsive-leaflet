@@ -37,7 +37,7 @@ function initLeaflet(div, basemap, layers){
 		}
 	});
 
-	//map.locate({setView: true, maxZoom: 14});
+	map.locate({setView: true, maxZoom: 14});
 }
 
 function addFeatureLayer(url, map) {

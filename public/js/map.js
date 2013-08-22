@@ -22,6 +22,7 @@ function initLeaflet(div, basemap, layers){
 			console.log('Mode: ' + layers[i].mode)
 			console.log('Url: ' + layers[i].url)
 			addFeatureLayer(layers[i].url, map);
+
 		}
 	};
 	function onLocationFound(e) {
@@ -53,9 +54,9 @@ function initLeaflet(div, basemap, layers){
 function addFeatureLayer(url, map) {
 	var featureLayer = L.esri.featureLayer(url, {
 		onEachFeature: function(geojson, layer){
-			createPopup(geojson,layer);
-		}
+			createPopup(geojson,layer);		}	
 	}).addTo(map);
+
 }
 
 function createPopup(geojson,layer) {
@@ -99,3 +100,6 @@ function initStamen(div){
 			}
 		);
 }
+
+
+

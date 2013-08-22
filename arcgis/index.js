@@ -35,8 +35,8 @@ var loadWebmap = function (id){
 	
 };
 
-function getWebmap(id, callback) {
-	var urlOptions = options(id, 'informi', '');
+function getWebmap(id, organization, callback) {
+	var urlOptions = options(id, organization, '');
 	request({ url: 'http://' + urlOptions.host + urlOptions.path, json:true}
 		, function(error, response, body) {
 		callback(JSON.parse(body));

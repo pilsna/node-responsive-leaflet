@@ -10,7 +10,7 @@
     "dependencies": {
         "leaflet": "0.6.x",
         "geoservices": "git://github.com/Esri/geoservices-js.git",
-        "Esri-leaflet": "git://github.com/Esri/esri-leaflet.git",
+        "Esri-Leaflet": "git://github.com/Esri/esri-leaflet.git",
         "leaflet-fullscreen": "git://github.com/mapbox/Leaflet.fullscreen.git",
         "zurb-foundation": "4.x",
         "express": "3.x",

@@ -19,6 +19,9 @@ module.exports = function(app) {
   app.get('/webmap', function(req, res){
     res.render('banded-webmap', { title: 'arcgis' })
   });
+  app.get('/skat2', function(req, res){
+    res.render('skat2', { title: 'skat' })
+  });
   app.get('/skat', function(req, res){
     var id = 'd4f4b174551e4cdd8aeb1b11f258cefe';
     arcgis.loadWebmap(id, "iglocation", function(webmap){
